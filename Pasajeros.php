@@ -54,8 +54,13 @@ class Pasajeros
         $this->telefono = $telefono;
     }
 
-    public function __agregarPasajero($array, $pasajero)
+    /*public function __agregarPasajero($array, $pasajero)
     {
         $array[] = $pasajero;
-    }
+    }*/
+
+    public function __toString() {
+        return "{$this->documento} - {$this->apellido} {$this->nombre} - {$this->telefono}\n";
+        }
+    
 }

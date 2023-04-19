@@ -144,7 +144,7 @@ class Viajes
     {
         $texto = '';
         foreach ($this->pasajeros as $pasajero) {
-            $texto .= "{$pasajero['documento']} - {$pasajero['nombre']} {$pasajero['apellido']}\n";
+            $texto .= $pasajero->__toString();
         }
 
         return "Código: {$this->codigo}\nDestino: {$this->destino}\nMáx. Pasajeros: {$this->maxPasajeros}\nPasajeros:\n{$texto}";
